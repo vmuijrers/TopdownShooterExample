@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
     public float force = 1000;
     public int damage = 10;
     public UnityEvent<Vector3, Quaternion> OnDestroyed;
-
+    public AudioObject audioHit;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +41,7 @@ public class Bullet : MonoBehaviour
             {
                 health.OnTakeDamage(damage);
             }
+            AudioManager.Instance.PlayObject(audioHit, transform.position);
             OnDestroyed?.Invoke(hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(gameObject);
         }

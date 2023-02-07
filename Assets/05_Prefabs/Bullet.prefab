@@ -79,6 +79,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  audioHit: {fileID: 11400000, guid: bc66bd57d6e96434aa3cb25151ec3177, type: 2}
 --- !u!114 &3498576051372400447
 MonoBehaviour:
   m_ObjectHideFlags: 0
